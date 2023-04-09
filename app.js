@@ -52,3 +52,46 @@ bark('scottie',-1);
 bark('mike',25);
 bark('jen',0, 0); // ?
 bark('troy',"20"); // ?
+
+
+////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+// FUNCTION DECLARATION VS FUNCTION EXPRESSIONS
+// v.34
+
+
+// DECLARATION
+/*
+// long way to do this
+function calcAge1 (birthYear) {
+    const age = 2023 - birthYear;
+    return age;
+}
+*/
+
+// shorter way to write the above
+function calcAge1 (birthYear){
+    return 2023 - birthYear;
+}
+
+// call function
+//calcAge1 (1977); // save this as a variable
+//
+const age1 = calcAge1(1977);
+console.log(age1);
+
+
+// EXPRESSION
+
+const calcAge2 = function (birthYear) {
+    return 2023-birthYear;
+}
+
+const age2 = calcAge2(1977);
+
+console.log(age1, age2);
+
+////////////////////////////////////////
+///////////////////////////////////////
+//////////////////////////////////////////////
