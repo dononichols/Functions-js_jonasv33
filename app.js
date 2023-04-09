@@ -32,3 +32,23 @@ console.log(appleJuice);
 // reuse the function with different input values, and get a different output.
 const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
+
+// ========================
+
+// =======================
+// NOTES: From Head First JavaScript book
+
+function bark (name, weight) {
+    if(weight > 20) {
+        console.log(name + ' says WOOF WOOF');
+    } else {
+        console.log(name + ' says woof woof');
+    }
+}
+
+// call the function
+bark('june',20);
+bark('scottie',-1);
+bark('mike',25);
+bark('jen',0, 0); // ?
+bark('troy',"20"); // ?
