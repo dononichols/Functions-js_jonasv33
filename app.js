@@ -83,7 +83,7 @@ console.log(age1);
 
 
 // EXPRESSION
-
+/*
 const calcAge2 = function (birthYear) {
     return 2023-birthYear;
 }
@@ -91,7 +91,47 @@ const calcAge2 = function (birthYear) {
 const age2 = calcAge2(1977);
 
 console.log(age1, age2);
-
+*/
 ////////////////////////////////////////
 ///////////////////////////////////////
 //////////////////////////////////////////////
+
+// vid. 35 ARROW FUNCTIONS
+
+// Function Expression-use as a ref comparison to arrow function
+const calcAge2 = function (birthYear) {
+    return 2023-birthYear;
+}
+
+// Arrow function
+// write the above as an arrow function
+// birthYear => 2023 - birthYear; // this is an arrow function...next, store in a varialbe
+
+const calcAge3 = birthYear => 2023 - birthYear; // this is good for one-liner functions, and returns value automatically without using the return. the arrow function here, also did not need parenthesis.
+const age3 = calcAge3(1977); // this invokes calcAge3, and assigns it to a variable
+console.log(age3);
+
+
+////////
+/*
+// how many years a person has left until retirement...will need to calculate the age and calculate the years to retirement
+const yearsUntilRetirement = birthYear => {
+    const age = 2023 - birthYear; // calculates age
+    const retirement = 65 - age; // calculates how many years until retirement
+    return retirement; // you can only omit the return IF you have a 1-liner function.
+}
+
+console.log(yearsUntilRetirement(1977));
+*/
+// the above is a circumstance in which we have one parameter with multiple lines of code
+
+// the below is a circumstance in which we have multiple parameters
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+    const age = 2023 - birthYear; // calculates age
+    const retirement = 65 - age; // calculates how many years until retirement
+    // return retirement; // you can only omit the return IF you have a 1-liner function.
+    return `${firstName} retires in ${retirement} years.`
+}
+console.log(yearsUntilRetirement(1977, 'Jonas'));
+console.log(yearsUntilRetirement(1980, 'Jr'));
