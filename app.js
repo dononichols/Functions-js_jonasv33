@@ -1,6 +1,6 @@
 'use strict';
 
-
+/*
 // create function. anything within the function body {}, is what will be executed when the function logger is- run, called, invoked...
  
 function logger() {
@@ -53,7 +53,7 @@ bark('mike',25);
 bark('jen',0, 0); // ?
 bark('troy',"20"); // ?
 
-
+*/
 ////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 
@@ -69,7 +69,7 @@ function calcAge1 (birthYear) {
     return age;
 }
 */
-
+/*
 // shorter way to write the above
 function calcAge1 (birthYear){
     return 2023 - birthYear;
@@ -81,7 +81,7 @@ function calcAge1 (birthYear){
 const age1 = calcAge1(1977);
 console.log(age1);
 
-
+*/
 // EXPRESSION
 /*
 const calcAge2 = function (birthYear) {
@@ -95,7 +95,7 @@ console.log(age1, age2);
 ////////////////////////////////////////
 ///////////////////////////////////////
 //////////////////////////////////////////////
-
+/*
 // vid. 35 ARROW FUNCTIONS
 
 // Function Expression-use as a ref comparison to arrow function
@@ -110,7 +110,7 @@ const calcAge2 = function (birthYear) {
 const calcAge3 = birthYear => 2023 - birthYear; // this is good for one-liner functions, and returns value automatically without using the return. the arrow function here, also did not need parenthesis.
 const age3 = calcAge3(1977); // this invokes calcAge3, and assigns it to a variable
 console.log(age3);
-
+*/
 
 ////////
 /*
@@ -126,7 +126,7 @@ console.log(yearsUntilRetirement(1977));
 // the above is a circumstance in which we have one parameter with multiple lines of code
 
 // the below is a circumstance in which we have multiple parameters
-
+/*
 const yearsUntilRetirement = (birthYear, firstName) => {
     const age = 2023 - birthYear; // calculates age
     const retirement = 65 - age; // calculates how many years until retirement
@@ -135,3 +135,27 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 }
 console.log(yearsUntilRetirement(1977, 'Jonas'));
 console.log(yearsUntilRetirement(1980, 'Jr'));
+*/
+
+///////////////////////////////////
+///////////////////////////////////
+
+// Functions Calling Other Functions
+
+// vid. 36
+
+// this function cuts a fruit into four piecess
+function cutFruitPieces(fruit) {
+    return fruit * 4;
+}
+
+//
+function fruitProcessor(apples, oranges) {
+    // these (applePieces & orangePieces) are function that call the function (cutFruitPieces) from inside of another function.
+    const applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+
+    const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
+    return juice; 
+}
+console.log(fruitProcessor(2,3)); // this invokes the fruitProcessor function, which in turn calls the cutFruitPieces function that's inside of it.
