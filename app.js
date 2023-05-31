@@ -139,6 +139,7 @@ console.log(yearsUntilRetirement(1980, 'Jr'));
 
 ///////////////////////////////////
 ///////////////////////////////////
+/*
 
 // Functions Calling Other Functions
 
@@ -159,3 +160,9 @@ function fruitProcessor(apples, oranges) {
     return juice; 
 }
 console.log(fruitProcessor(2,3)); // this invokes the fruitProcessor function, which in turn calls the cutFruitPieces function that's inside of it.
+
+*/
+
+//////////
+
+// VID. 37 REVIEWING FUNCTIONS
